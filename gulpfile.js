@@ -50,3 +50,13 @@ gulp.task('git-check', function(done) {
   }
   done();
 });
+
+gulp.task('vendor', function(done) {
+  gulp.src([
+    'www/lib/angular-parse/angular-parse.js'
+  ])
+  .pipe(concat('vendor.js'))
+  .on('error', gutil.log)
+  .pipe(gulp.dest('www/js'))
+  .on('end', done);
+});
