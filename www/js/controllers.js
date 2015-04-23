@@ -31,6 +31,7 @@ angular.module('magaperolas.controllers', [])
     $location.path('tab/todos/')
   };
   $scope.fetchAllTodos = function() {
+    $scope.todos = null;
     return Todos.query().then(function(todos) {
       $scope.$broadcast('scroll.refreshComplete');
       return $scope.todos = todos;
