@@ -6,7 +6,7 @@
     "unsafe-perm": true
   },
   "scripts": {
-    "postinstall": "sudo gulp vendor --allow-root"
+    "postinstall": "gulp vendor"
   },
   "dependencies": {
     "gulp": "^3.5.6",

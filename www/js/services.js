@@ -9,7 +9,7 @@ angular.module('magaperolas.services', ['Parse'])
       return Todos.__super__.constructor.apply(this, arguments);
     }
 
-    Todos.configure("Todos", "title", "done");
+    Todos.configure("Todos", "title", "description", "done");
 
     return Todos;
 

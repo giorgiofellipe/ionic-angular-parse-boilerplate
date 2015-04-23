@@ -1,12 +1,19 @@
 <ion-view view-title="Edit ToDo">
   <ion-nav-buttons side="right">
-    <button class="button button-clear button-positive" ng-click="saveTodo()">
+    <button class="button button-clear button-light" ng-click="saveTodo()">
       Save
     </button>
   </ion-nav-buttons>
   <ion-content class="padding">
-    <label class="item item-input">
-      <input type="text" placeholder="Title" ng-model="todo.title">
-    </label>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Title</span>
+        <input type="text" placeholder="Homework" ng-model="todo.title">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <input type="text" placeholder="How was your vacation?" ng-model="todo.description">
+      </label>
+    </div>
   </ion-content>
 </ion-view>

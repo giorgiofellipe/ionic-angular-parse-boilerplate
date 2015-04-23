@@ -5,7 +5,7 @@ angular.module('magaperolas.controllers', [])
 .controller('TodosCtrl', function($scope, $location, Todos) {
   $scope.remove = function(todo) {
     todo.destroy();
-    // $scope.fetchAllTodos();
+    $scope.fetchAllTodos();
   };
   $scope.doneToggle = function(todo) {
     if (todo.done) {
@@ -32,7 +32,7 @@ angular.module('magaperolas.controllers', [])
   $scope.fetchAllTodos();
 })
 
-.controller('TodosDetailCtrl', function($scope, $stateParams, $ionicHistory, Todos) {
+.controller('TodosDetailCtrl', function($scope, $stateParams, $ionicHistory, $ionicPopup, Todos) {
   $scope.findTodo = function(todoId) {
     return Todos.query({
       'where':{
@@ -48,8 +48,15 @@ angular.module('magaperolas.controllers', [])
     });
   };
   $scope.saveTodo = function() {
-    $scope.todo.save();
-    $ionicHistory.goBack();
+    if (!$scope.todo.title) {
+      $ionicPopup.alert({
+         title: 'Oops...',
+         template: 'You must provide a title!'
+       });
+    } else {
+      $scope.todo.save();
+      $ionicHistory.goBack();
+    }
   };
   $scope.findTodo($stateParams.todoId);
 })

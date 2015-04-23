@@ -1,11 +1,18 @@
 <ion-view view-title="ToDos">
   <ion-nav-buttons side="right">
-    <button class="button button-clear button-positive" ng-click="newTodo()">
+    <button class="button button-clear button-light" ng-click="newTodo()">
       Add
     </button>
   </ion-nav-buttons>
   <ion-content>
     <ion-refresher pulling-text="Pull to refresh" on-refresh="fetchAllTodos()"></ion-refresher>
+    <!-- TODO: implement search
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>-->
     <ion-list>
       <ion-item class="item-remove-animate item-icon-right" ng-repeat="todo in todos" type="item-text-wrap" href="#/tab/todos/{{todo.objectId}}">
         <h2 ng-if="todo.done">
