@@ -2,10 +2,17 @@ angular.module('magaperolas.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('TodosCtrl', function($scope, $location, Todos) {
+.controller('TodosCtrl', function($scope, $location, $ionicPopup, Todos) {
   $scope.remove = function(todo) {
-    todo.destroy();
-    $scope.fetchAllTodos();
+    $ionicPopup.confirm({
+      title: 'Confirm',
+      template: 'Are you sure you want to delete it?'
+    }).then(function(res) {
+      if(res) {
+        todo.destroy();
+        $scope.fetchAllTodos();
+      }
+    });
   };
   $scope.doneToggle = function(todo) {
     if (todo.done) {
