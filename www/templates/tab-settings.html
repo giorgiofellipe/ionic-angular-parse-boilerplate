@@ -1,0 +1,10 @@
+<ion-view view-title="Settings">
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="fetchSettings()"></ion-refresher>
+  	<ion-list>
+      <ion-toggle ng-model="settings.showAlreadyDone" ng-change="save()">
+        Show already done ToDos
+      </ion-toggle>
+  	</ion-list>
+  </ion-content>
+</ion-view>

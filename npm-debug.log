@@ -1,0 +1,63 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json ionicangularparseboilerplate@1.0.0 No repository field.
+5 warn package.json ionicangularparseboilerplate@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate',
+7 verbose install   [ 'gulp',
+7 verbose install     'gulp-sass',
+7 verbose install     'gulp-concat',
+7 verbose install     'gulp-minify-css',
+7 verbose install     'gulp-rename',
+7 verbose install     'bower',
+7 verbose install     'gulp-util',
+7 verbose install     'shelljs' ] ]
+8 info preinstall ionicangularparseboilerplate@1.0.0
+9 verbose readDependencies using package.json deps
+10 verbose already installed skipping gulp-concat@^2.2.0 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+11 verbose already installed skipping gulp-minify-css@^0.3.0 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+12 verbose already installed skipping gulp-rename@^1.2.0 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+13 verbose already installed skipping bower@^1.3.3 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+14 verbose already installed skipping gulp-util@^2.2.14 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+15 verbose already installed skipping shelljs@^0.3.0 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+16 verbose already installed skipping gulp@^3.5.6 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+17 verbose already installed skipping gulp-sass@^1.3.3 /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+18 silly resolved []
+19 info build /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+20 verbose linkStuff [ false, false, false, '/Users/giorgiofellipe/Sites' ]
+21 info linkStuff ionicangularparseboilerplate@1.0.0
+22 verbose linkBins ionicangularparseboilerplate@1.0.0
+23 verbose linkMans ionicangularparseboilerplate@1.0.0
+24 verbose rebuildBundles ionicangularparseboilerplate@1.0.0
+25 verbose rebuildBundles [ '.bin',
+25 verbose rebuildBundles   'bower',
+25 verbose rebuildBundles   'gulp',
+25 verbose rebuildBundles   'gulp-concat',
+25 verbose rebuildBundles   'gulp-minify-css',
+25 verbose rebuildBundles   'gulp-rename',
+25 verbose rebuildBundles   'gulp-sass',
+25 verbose rebuildBundles   'gulp-util',
+25 verbose rebuildBundles   'shelljs' ]
+26 info install ionicangularparseboilerplate@1.0.0
+27 info postinstall ionicangularparseboilerplate@1.0.0
+28 verbose unsafe-perm in lifecycle true
+29 info ionicangularparseboilerplate@1.0.0 Failed to exec postinstall script
+30 error ionicangularparseboilerplate@1.0.0 postinstall: `sudo gulp build --allow-root`
+30 error Exit status 1
+31 error Failed at the ionicangularparseboilerplate@1.0.0 postinstall script.
+31 error This is most likely a problem with the ionicangularparseboilerplate package,
+31 error not with npm itself.
+31 error Tell the author that this fails on your system:
+31 error     sudo gulp build --allow-root
+31 error You can get their info via:
+31 error     npm owner ls ionicangularparseboilerplate
+31 error There is likely additional logging output above.
+32 error System Darwin 14.3.0
+33 error command "node" "/usr/local/bin/npm" "install"
+34 error cwd /Users/giorgiofellipe/Sites/IonicAngularParseBoilerplate
+35 error node -v v0.10.32
+36 error npm -v 1.4.28
+37 error code ELIFECYCLE
+38 verbose exit [ 1, true ]
