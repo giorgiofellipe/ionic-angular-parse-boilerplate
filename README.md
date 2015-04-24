@@ -31,15 +31,19 @@ Change these values with the values from your Parse app
 
 ### Run
 - Runs full browser
+
 `ionic serve`
 
 - Runs comparison, side by side, between iOS and Android versions
+
 `ionic serve --lab`
 
 - Launch emulator/simulator, deploy and execute your app
+
 `ionic run [ios/android] --emulator`
 
 - Launch App on emulator/simulator with **livereload**
+
 `ionic run [ios/android] --emulator --livereload`
 
 ### License
