@@ -8,9 +8,9 @@ ToDo List
 
 ### Requirements
 - [NodeJS](https://nodejs.org/)
+- [Ionic](http://ionicframework.com/)
 
 ### Dependencies
-- [Ionic](http://ionicframework.com/)
 - [Gulp](http://gulpjs.com/)
 - [Bower](http://bower.io/)
 - [Angular Parse](https://github.com/jimrhoskins/angular-parse)
