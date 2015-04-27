@@ -14,6 +14,12 @@
         <span class="input-label">Description</span>
         <input type="text" placeholder="How was your vacation?" ng-model="todo.description">
       </label>
+      <label class="item item-input item-select">
+        <div class="input-label">Category</div>
+        <select ng-model="categoryId" ng-change="categoryChanged(categoryId)">
+          <option ng-repeat="category in categories" ng-selected="category.objectId == todo.category.objectId" ng-value="category.objectId">{{category.name}}</option>
+        </select>
+      </label>
     </div>
   </ion-content>
 </ion-view>

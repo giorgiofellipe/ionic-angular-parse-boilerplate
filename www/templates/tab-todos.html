@@ -14,7 +14,7 @@
       </label>
     </div>-->
     <ion-list>
-      <ion-item class="item-remove-animate item-icon-right" ng-repeat="todo in todos" type="item-text-wrap" href="#/tab/todos/{{todo.objectId}}">
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="todo in todos" type="item-text-wrap" href="#/tab/todo/{{todo.objectId}}">
         <h2 ng-if="todo.done">
           <strike>{{todo.title}}</strike>
         </h2>

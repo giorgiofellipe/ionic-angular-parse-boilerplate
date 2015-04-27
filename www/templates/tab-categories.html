@@ -1,0 +1,31 @@
+<ion-view view-title="Categories">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear button-light" ng-click="newCategory()">
+      Add
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="fetchAllCategories()"></ion-refresher>
+    <!-- TODO: implement search
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>-->
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="category in categories" type="item-text-wrap" href="#/tab/todos/{{category.objectId}}">
+        <h2>
+          {{category.name}}
+        </h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-energized" ng-click="edit(category)">
+          Edit
+        </ion-option-button>
+        <ion-option-button class="button-assertive" ng-click="remove(category)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

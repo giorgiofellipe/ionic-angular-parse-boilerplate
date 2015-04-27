@@ -51,20 +51,41 @@ angular.module('starter', ['ionic', 'magaperolas.controllers', 'magaperolas.serv
     }
   })
 
-  .state('tab.todos', {
+    
+
+  .state('tab.categories', {
       cache: false,
-      url: '/todos',
+      url: '/categories',
       views: {
-        'tab-todos': {
+        'tab-categories': {
+          templateUrl: 'templates/tab-categories.html',
+          controller: 'CategoriesCtrl'
+        }
+      }
+    })
+    .state('tab.category-detail', {
+      url: '/category/:categoryId',
+      views: {
+        'tab-categories': {
+          templateUrl: 'templates/category-detail.html',
+          controller: 'CategoryDetailCtrl'
+        }
+      }
+    })
+    .state('tab.todos', {
+      cache: false,
+      url: '/todos/:categoryId',
+      views: {
+        'tab-categories': {
           templateUrl: 'templates/tab-todos.html',
           controller: 'TodosCtrl'
         }
       }
     })
     .state('tab.chat-detail', {
-      url: '/todos/:todoId',
+      url: '/todo/:todoId',
       views: {
-        'tab-todos': {
+        'tab-categories': {
           templateUrl: 'templates/todos-detail.html',
           controller: 'TodosDetailCtrl'
         }

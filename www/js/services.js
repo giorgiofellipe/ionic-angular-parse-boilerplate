@@ -9,9 +9,25 @@ angular.module('magaperolas.services', ['Parse'])
       return Todos.__super__.constructor.apply(this, arguments);
     }
 
-    Todos.configure("Todos", "title", "description", "done");
+    Todos.configure("Todos", "title", "description", "done", "category");
 
     return Todos;
+
+  })(Parse.Model);
+})
+
+.factory('Category', function(Parse) {
+  var Category;
+  return Category = (function(_super) {
+    __extends(Category, _super);
+
+    function Category() {
+      return Category.__super__.constructor.apply(this, arguments);
+    }
+
+    Category.configure("Category", "name", "description");
+
+    return Category;
 
   })(Parse.Model);
 })

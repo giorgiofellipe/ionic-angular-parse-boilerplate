@@ -1,0 +1,19 @@
+<ion-view view-title="Edit Category">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear button-light" ng-click="saveCategory()">
+      Save
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="Work" ng-model="category.name">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <input type="text" placeholder="" ng-model="category.description">
+      </label>
+    </div>
+  </ion-content>
+</ion-view>
