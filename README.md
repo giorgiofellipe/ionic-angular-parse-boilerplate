@@ -15,6 +15,15 @@ ToDo List
 - [Bower](http://bower.io/)
 - [Angular Parse](https://github.com/jimrhoskins/angular-parse)
 
+### Features
+- :white_check_mark: Ionic Tabs Layout 
+- :white_check_mark: Ionic Page Refresher
+- :white_check_mark: Ionic Popup
+- :white_check_mark: Parse CRUD
+- :white_check_mark: Parse Relationship between Models
+- Parse Login
+- Parse Push Notifications
+
 ### Install
 `npm install`
 
