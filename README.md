@@ -24,6 +24,8 @@ ToDo List
 - Parse Login
 - Parse Push Notifications
 
+### Contributing
+
 ### Install
 `npm install`
 
