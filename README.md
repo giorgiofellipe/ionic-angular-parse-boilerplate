@@ -34,6 +34,8 @@ To do so fork this repo and create a branch respecting the following nomenclatur
 
 *Name:* bug or feature name
 
+E.g.: *feature/login*
+
 When your changes are done send a PR!
 
 ### Install
