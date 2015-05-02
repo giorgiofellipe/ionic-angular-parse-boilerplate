@@ -38,6 +38,10 @@ E.g.: *feature/login*
 
 When your changes are done send a PR!
 
+### Usage
+
+Just clone this *repo* and change whatever you want!
+
 ### Install
 `npm install`
 
