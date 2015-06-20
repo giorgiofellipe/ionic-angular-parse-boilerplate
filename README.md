@@ -21,6 +21,7 @@ ToDo List
 - :white_check_mark: Ionic Popup
 - :white_check_mark: Parse CRUD
 - :white_check_mark: Parse Relationship between Models
+- :white_check_mark: Ionic.io Analytics
 - Parse Login
 - Parse Push Notifications
 
@@ -55,6 +56,16 @@ In **www/js/app.js** search for:
   );
 ```
 Change these values with the values from your Parse app
+
+### Ionic.io Analytics
+In **www/js/app.js** search for:
+```javascript
+// The App ID for the server
+    app_id: 'APP_ID',
+    // The API key all services will use for this app
+    api_key: 'PUBLIC_API_KEY'
+```
+Change these values with the value from Ionic.io
 
 ### Run
 - Runs full browser
