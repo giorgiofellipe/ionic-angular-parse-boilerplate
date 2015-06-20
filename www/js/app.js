@@ -8,7 +8,7 @@ var __hasProp = {}.hasOwnProperty,
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'magaperolas.controllers', 'magaperolas.services', 'Parse'])
+angular.module('starter', ['ionic', 'ionic.service.core', 'ionic.service.analytics', 'magaperolas.controllers', 'magaperolas.services', 'Parse'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -24,7 +24,24 @@ angular.module('starter', ['ionic', 'magaperolas.controllers', 'magaperolas.serv
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, ParseProvider) {
+.config(['$ionicAppProvider', function($ionicAppProvider) {
+  // Identify app
+  $ionicAppProvider.identify({
+    // The App ID for the server
+    app_id: 'APP_ID',
+    // The API key all services will use for this app
+    api_key: 'PUBLIC_API_KEY'
+  })
+}])
+
+.run(['$ionicAnalytics', function($ionicAnalytics) {
+  //go to https://github.com/driftyco/ionic-starter-analytics to see another example
+  //analytics docs http://docs.ionic.io/v1.0/docs/analytics-from-scratch
+  $ionicAnalytics.register();
+}])
+
+
+.config(function($stateProvider, $urlRouterProvider,$ionicAppProvider, ParseProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
