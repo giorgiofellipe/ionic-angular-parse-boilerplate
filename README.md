@@ -60,6 +60,8 @@ Change these values with the values from your Parse app
 ### Ionic.io Analytics
 In **www/js/app.js** search for:
 ```javascript
+// Identify app
+  $ionicAppProvider.identify({
 // The App ID for the server
     app_id: 'APP_ID',
     // The API key all services will use for this app
