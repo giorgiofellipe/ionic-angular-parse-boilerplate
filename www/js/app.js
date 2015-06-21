@@ -10,7 +10,7 @@ var __hasProp = {}.hasOwnProperty,
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ionic.service.core', 'ionic.service.analytics', 'magaperolas.controllers', 'magaperolas.services', 'Parse'])
 
-.run(function($ionicPlatform) {
+.run(['$ionicPlatform', '$ionicAnalytics', function($ionicPlatform, $ionicAnalytics ) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,26 +22,19 @@ angular.module('starter', ['ionic', 'ionic.service.core', 'ionic.service.analyti
       StatusBar.styleLightContent();
     }
   });
-})
-
-.config(['$ionicAppProvider', function($ionicAppProvider) {
-  // Identify app
-  $ionicAppProvider.identify({
-    // The App ID for the server
-    app_id: 'APP_ID',
-    // The API key all services will use for this app
-    api_key: 'PUBLIC_API_KEY'
-  })
-}])
-
-.run(['$ionicAnalytics', function($ionicAnalytics) {
   //go to https://github.com/driftyco/ionic-starter-analytics to see another example
   //analytics docs http://docs.ionic.io/v1.0/docs/analytics-from-scratch
-  $ionicAnalytics.register();
+ $ionicAnalytics.register();
 }])
 
+.config(function($stateProvider, $urlRouterProvider, $ionicAppProvider, ParseProvider) {
 
-.config(function($stateProvider, $urlRouterProvider,$ionicAppProvider, ParseProvider) {
+  $ionicAppProvider.identify({
+      // The App ID for the server
+      app_id: 'APP_ID',
+      // The API key all services will use for this app
+      api_key: 'API_KEY'
+    })
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
