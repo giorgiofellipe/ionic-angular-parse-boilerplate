@@ -1,4 +1,4 @@
-angular.module('magaperolas.services', ['Parse'])
+angular.module('starter.services', ['Parse'])
 
 .factory('Todos', function(Parse) {
   var Todos;
