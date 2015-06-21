@@ -14,6 +14,8 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="lib/ionic-service-analytics/ionic-analytics.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -24,7 +26,7 @@
     <script src="js/services.js"></script>
     <script src="js/vendor.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ion-track-auto>
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
